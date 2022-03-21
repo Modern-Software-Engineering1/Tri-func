@@ -77,7 +77,7 @@ function varargout = calculator_OutputFcn(hObject, eventdata, handles)
 varargout{1} = handles.output;
 
 
-% --- Executes on button press in pushbutton4.¡ª¡ª¡°ÍËÒ»¸ñ¡±
+% --- Executes on button press in pushbutton4.â€”â€”â€œé€€ä¸€æ ¼â€
 function pushbutton4_Callback(hObject, eventdata, handles) 
     textString=get(handles.edit1,'String');
     as=char(textString);
@@ -90,7 +90,7 @@ function pushbutton4_Callback(hObject, eventdata, handles)
 % handles    structure with handles and user data (see GUIDATA)
 
 
-% --- Executes on button press in pushbutton6.¡ª¡ª¡°7¡±
+% --- Executes on button press in pushbutton6.â€”â€”â€œ7â€
 function pushbutton6_Callback(hObject, eventdata, handles)
     textString = get(handles.edit1,'String');
     textString = strcat(textString,'7');
@@ -101,7 +101,7 @@ function pushbutton6_Callback(hObject, eventdata, handles)
 % handles    structure with handles and user data (see GUIDATA)
 
 
-% --- Executes on button press in pushbutton7. ¡ª¡ª¡°9¡±
+% --- Executes on button press in pushbutton7. â€”â€”â€œ9â€
 function pushbutton7_Callback(hObject, eventdata, handles)
     textString = get(handles.edit1,'String');
     textString = strcat(textString,'9');
@@ -112,7 +112,7 @@ function pushbutton7_Callback(hObject, eventdata, handles)
 % handles    structure with handles and user data (see GUIDATA)
 
 
-% --- Executes on button press in pushbutton8. ¡ª¡ªÈ«²¿Çå³ı
+% --- Executes on button press in pushbutton8. â€”â€”å…¨éƒ¨æ¸…é™¤
 function pushbutton8_Callback(hObject, eventdata, handles)
     textString = get(handles.edit1,'String');
     textString = get(handles.edit2,'String');
@@ -124,7 +124,7 @@ function pushbutton8_Callback(hObject, eventdata, handles)
 % handles    structure with handles and user data (see GUIDATA)
 
 
-% --- Executes on button press in pushbutton9. ¡ª¡ª¡°8¡±
+% --- Executes on button press in pushbutton9. â€”â€”â€œ8â€
 function pushbutton9_Callback(hObject, eventdata, handles)
     textString = get(handles.edit1,'String');
     textString = strcat(textString,'8');
@@ -135,7 +135,7 @@ function pushbutton9_Callback(hObject, eventdata, handles)
 % handles    structure with handles and user data (see GUIDATA)
 
 
-% --- Executes on button press in pushbutton10. ¡ª¡ª"sin"
+% --- Executes on button press in pushbutton10. â€”â€”"sin"
 function pushbutton10_Callback(hObject, eventdata, handles)
     textString = get(handles.edit1,'String');
     textString = strcat(textString,'zyq_sin');
@@ -146,7 +146,7 @@ function pushbutton10_Callback(hObject, eventdata, handles)
 % handles    structure with handles and user data (see GUIDATA)
 
 
-% --- Executes on button press in pushbutton11.¡ª¡ª¡°4¡±
+% --- Executes on button press in pushbutton11.â€”â€”â€œ4â€
 function pushbutton11_Callback(hObject, eventdata, handles)
     textString = get(handles.edit1,'String');
     textString = strcat(textString,'4');
@@ -157,7 +157,7 @@ function pushbutton11_Callback(hObject, eventdata, handles)
 % handles    structure with handles and user data (see GUIDATA)
 
 
-% --- Executes on button press in pushbutton12.¡ª¡ª¡°6¡±
+% --- Executes on button press in pushbutton12.â€”â€”â€œ6â€
 function pushbutton12_Callback(hObject, eventdata, handles)
     textString = get(handles.edit1,'String');
     textString = strcat(textString,'6');
@@ -168,7 +168,7 @@ function pushbutton12_Callback(hObject, eventdata, handles)
 % handles    structure with handles and user data (see GUIDATA)
 
 
-% --- Executes on button press in pushbutton13.  ¡ª¡ª¡°cos¡±
+% --- Executes on button press in pushbutton13.  â€”â€”â€œcosâ€
 function pushbutton13_Callback(hObject, eventdata, handles)
     textString = get(handles.edit1,'String');
     textString = strcat(textString,'lu_cos');
@@ -179,7 +179,7 @@ function pushbutton13_Callback(hObject, eventdata, handles)
 % handles    structure with handles and user data (see GUIDATA)
 
 
-% --- Executes on button press in pushbutton14.¡ª¡ª¡°5¡±
+% --- Executes on button press in pushbutton14.â€”â€”â€œ5â€
 function pushbutton14_Callback(hObject, eventdata, handles)
     textString = get(handles.edit1,'String');
     textString = strcat(textString,'5');
@@ -190,14 +190,17 @@ function pushbutton14_Callback(hObject, eventdata, handles)
 % handles    structure with handles and user data (see GUIDATA)
 
 
-% --- Executes on button press in pushbutton15. ¡ª¡ª¡°arcsin¡±
+% --- Executes on button press in pushbutton15. â€”â€”â€œarcsinâ€
 function pushbutton15_Callback(hObject, eventdata, handles)
 % hObject    handle to pushbutton15 (see GCBO)
 % eventdata  reserved - to be defined in a future version of MATLAB
 % handles    structure with handles and user data (see GUIDATA)
+    textString = get(handles.edit1,'String');
+    textString = strcat(textString,'arcsin_ly');
+    set(handles.edit1,'String',textString);
+    guidata(hObject, handles);
 
-
-% --- Executes on button press in pushbutton16.  ¡ª¡ª¡°1¡±
+% --- Executes on button press in pushbutton16.  â€”â€”â€œ1â€
 function pushbutton16_Callback(hObject, eventdata, handles)
     textString = get(handles.edit1,'String');
     textString = strcat(textString,'1');
@@ -208,7 +211,7 @@ function pushbutton16_Callback(hObject, eventdata, handles)
 % handles    structure with handles and user data (see GUIDATA)
 
 
-% --- Executes on button press in pushbutton17. ¡ª¡ª¡°3¡±
+% --- Executes on button press in pushbutton17. â€”â€”â€œ3â€
 function pushbutton17_Callback(hObject, eventdata, handles)
     textString = get(handles.edit1,'String');
     textString = strcat(textString,'3');
@@ -220,14 +223,14 @@ function pushbutton17_Callback(hObject, eventdata, handles)
 % handles    structure with handles and user data (see GUIDATA)
 
 
-% --- Executes on button press in pushbutton18. ¡ª¡ª¡°arctan¡±
+% --- Executes on button press in pushbutton18. â€”â€”â€œarctanâ€
 function pushbutton18_Callback(hObject, eventdata, handles)
 % hObject    handle to pushbutton18 (see GCBO)
 % eventdata  reserved - to be defined in a future version of MATLAB
 % handles    structure with handles and user data (see GUIDATA)
 
 
-% --- Executes on button press in pushbutton19.  ¡ª¡ª¡°2¡±
+% --- Executes on button press in pushbutton19.  â€”â€”â€œ2â€
 function pushbutton19_Callback(hObject, eventdata, handles)
     textString = get(handles.edit1,'String');
     textString = strcat(textString,'2');
@@ -238,7 +241,7 @@ function pushbutton19_Callback(hObject, eventdata, handles)
 % handles    structure with handles and user data (see GUIDATA)
 
 
-% --- Executes on button press in pushbutton20.  ¡ª¡ª¡°£¨¡±
+% --- Executes on button press in pushbutton20.  â€”â€”â€œï¼ˆâ€
 function pushbutton20_Callback(hObject, eventdata, handles)
     textString = get(handles.edit1,'String');
     textString = strcat(textString,'(');
@@ -249,7 +252,7 @@ function pushbutton20_Callback(hObject, eventdata, handles)
 % handles    structure with handles and user data (see GUIDATA)
 
 
-% --- Executes on button press in pushbutton21.  ¡ª¡ª¡°-ºÅ¡±
+% --- Executes on button press in pushbutton21.  â€”â€”â€œ-å·â€
 function pushbutton21_Callback(hObject, eventdata, handles)
     textString = get(handles.edit1,'String');
     textString = strcat(textString,'-');
@@ -260,7 +263,7 @@ function pushbutton21_Callback(hObject, eventdata, handles)
 % handles    structure with handles and user data (see GUIDATA)
 
 
-% --- Executes on button press in pushbutton22.  ¡ª¡ª¡°Ğ¡Êıµã.¡±
+% --- Executes on button press in pushbutton22.  â€”â€”â€œå°æ•°ç‚¹.â€
 function pushbutton22_Callback(hObject, eventdata, handles)
     textString = get(handles.edit1,'String');
     textString = strcat(textString,'.');
@@ -271,7 +274,7 @@ function pushbutton22_Callback(hObject, eventdata, handles)
 % handles    structure with handles and user data (see GUIDATA)
 
 
-% --- Executes on button press in pushbutton23.  ¡ª¡ª¡°£©¡±
+% --- Executes on button press in pushbutton23.  â€”â€”â€œï¼‰â€
 function pushbutton23_Callback(hObject, eventdata, handles)
     textString = get(handles.edit1,'String');
     textString = strcat(textString,')');
@@ -282,7 +285,7 @@ function pushbutton23_Callback(hObject, eventdata, handles)
 % handles    structure with handles and user data (see GUIDATA)
 
 
-% --- Executes on button press in pushbutton24.  ¡ª¡ª¡°0¡±
+% --- Executes on button press in pushbutton24.  â€”â€”â€œ0â€
 function pushbutton24_Callback(hObject, eventdata, handles)
     textString = get(handles.edit1,'String');
     textString = strcat(textString,'0');
@@ -293,7 +296,7 @@ function pushbutton24_Callback(hObject, eventdata, handles)
 % handles    structure with handles and user data (see GUIDATA)
 
 
-% --- Executes on button press in pushbutton25. ¡ª¡ª¡°=¡±
+% --- Executes on button press in pushbutton25. â€”â€”â€œ=â€
 function pushbutton25_Callback(hObject, eventdata, handles)
     textString = get(handles.edit1,'String');
     aa = eval(textString);
@@ -305,7 +308,7 @@ function pushbutton25_Callback(hObject, eventdata, handles)
 
 
 
-% --- Executes on button press in pushbutton28.  ¡ª¡ªÍË³ö¼ÆËãÆ÷
+% --- Executes on button press in pushbutton28.  â€”â€”é€€å‡ºè®¡ç®—å™¨
 function pushbutton28_Callback(hObject, eventdata, handles)
     close(gcf);
 % hObject    handle to pushbutton28 (see GCBO)
@@ -314,7 +317,7 @@ function pushbutton28_Callback(hObject, eventdata, handles)
 
 
 
-function edit1_Callback(hObject, eventdata, handles)  %¡ª¡ªÊäÈë¿ò
+function edit1_Callback(hObject, eventdata, handles)  %â€”â€”è¾“å…¥æ¡†
 
 % --- Executes during object creation, after setting all properties.
 function edit1_CreateFcn(hObject, eventdata, handles)
@@ -330,7 +333,7 @@ end
 
 
 
-function edit2_Callback(hObject, eventdata, handles)  %  ¡ª¡ªÊä³ö½á¹û¿ò
+function edit2_Callback(hObject, eventdata, handles)  %  â€”â€”è¾“å‡ºç»“æœæ¡†
 
 % --- Executes during object creation, after setting all properties.
 function edit2_CreateFcn(hObject, eventdata, handles)
@@ -352,15 +355,15 @@ function pushbutton31_Callback(hObject, eventdata, handles)
 % eventdata  reserved - to be defined in a future version of MATLAB
 % handles    structure with handles and user data (see GUIDATA)
     str = get(handles.edit1,'String');
-    if isempty(strfind(str,'.')) pat='\d*'; %ÅĞ¶ÏÊÇ·ñÎªĞ¡Êı
+    if isempty(strfind(str,'.')) pat='\d*'; %åˆ¤æ–­æ˜¯å¦ä¸ºå°æ•°
     else pat='\d*\.\d*';
     end
-    rad_s_temp=regexp(str, pat, 'match'); %ÌáÈ¡Êı×Ö
+    rad_s_temp=regexp(str, pat, 'match'); %æå–æ•°å­—
     rad_s=rad_s_temp{1};
     rad_n=str2num(rad_s);
-    angle_n=rad_n*(180/pi);  %»¡¶È×ª½Ç¶È
+    angle_n=rad_n*(180/pi);  %å¼§åº¦è½¬è§’åº¦
     angle_s=num2str(angle_n);
-    %angle_s = strcat(angle_s,'¡ã');
+    %angle_s = strcat(angle_s,'Â°');
     str_text=strrep(str,rad_s,angle_s);
     set(handles.edit1,'String',str_text);
     guidata(hObject, handles);
