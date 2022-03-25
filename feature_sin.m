@@ -1,3 +1,6 @@
+%%%%%%%%%       sin函数求解过程          %%%%%%%%%%%%%%
+%输入参数：角度
+%输出参数：正弦值
 function result=feature_sin(input_angle)
  if input_angle >= 0%正值角度计算
         angle = pi * (input_angle / 180);%角度转换为弧度		    
