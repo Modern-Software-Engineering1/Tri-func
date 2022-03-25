@@ -138,7 +138,7 @@ function pushbutton9_Callback(hObject, eventdata, handles)
 % --- Executes on button press in pushbutton10. ——"sin"
 function pushbutton10_Callback(hObject, eventdata, handles)
     textString = get(handles.edit1,'String');
-    textString = strcat(textString,'zyq_sin');
+    textString = strcat(textString,'_sin');
     set(handles.edit1,'String',textString);
     guidata(hObject, handles);
 % hObject    handle to pushbutton10 (see GCBO)
