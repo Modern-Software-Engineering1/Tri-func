@@ -1,4 +1,4 @@
-function result=zyq_sin(input_angle)
+function result=function_sin(input_angle)
     if input_angle >= 0
         angle = pi * (input_angle / 180);		    
         result = 0;  
