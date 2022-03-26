@@ -11,7 +11,7 @@ else
     temp = InputNum;
     ArcsinResult= InputNum;
     n = 1;
-    while(abs(temp) >= 1e-10)
+    while(abs(temp) >= 1e-12)
         temp = temp * (2 * n - 1) * (2 * n - 1) * InputNum * InputNum / ((2 * n) * (2 * n + 1));
         n = n + 1;
         ArcsinResult = ArcsinResult + temp;
