@@ -27,7 +27,11 @@ function ArctanResult = Arctan(InputValue)
           ArctanResult = ArctanResult + Temp;
           j = j + 1;
       end
-      ArctanResult = pi / 2 - ArctanResult;
+      if (InputValue > 0)
+          ArctanResult = pi / 2 - ArctanResult;
+      else
+          ArctanResult = -( pi / 2 + ArctanResult);
+      end
     end
   ArctanResult = ConvertToAngle(ArctanResult);
   ArctanResult = roundn(ArctanResult, -2); %保留两位小数
