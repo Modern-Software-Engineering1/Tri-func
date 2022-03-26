@@ -1,27 +1,39 @@
 %% 
-%%%%%%%%%       arctanº¯ÊıÇó½â¹ı³Ì          %%%%%%%%%%%%%%
-%ÊäÈë²ÎÊı£ºÊı×Ö£¬·¶Î§£¨-1£¬1£©
-%Êä³ö²ÎÊı£ºarctanº¯ÊıËùÇóµÃµÄ½Ç¶È
+%%%%%%%%%       arctanå‡½æ•°æ±‚è§£è¿‡ç¨‹          %%%%%%%%%%%%%%
+%è¾“å…¥å‚æ•°ï¼šæ•°å­—ï¼ŒèŒƒå›´ï¼ˆ-1ï¼Œ1ï¼‰
+%è¾“å‡ºå‚æ•°ï¼šarctanå‡½æ•°æ‰€æ±‚å¾—çš„è§’åº¦
 %% 
 function ArctanResult = Arctan(InputValue)
-  if (InputValue > 1)
+  if (InputValue > 127)
       msgbox('Out of range, please re-enter!');
-  elseif (InputValue < -1)
-      msgbox('Out of range, please re-enter!'); %ÊäÈë³¬³öÈ¡Öµ·¶Î§£¬ÔòÌáÊ¾ÖØĞÂÊäÈë¡£
+  elseif (InputValue < -128)
+      msgbox('Out of range, please re-enter!'); %è¾“å…¥è¶…å‡ºå–å€¼èŒƒå›´ï¼Œåˆ™æç¤ºé‡æ–°è¾“å…¥ã€‚
   else
+    if ((InputValue >= -1) && (InputValue <= 1)) %å¦‚æœè¾“å…¥å‚æ•°çš„èŒƒå›´ä¸º[-1,1]ï¼Œåˆ™é‡‡ç”¨æ³°å‹’å±•å¼€å…¬å¼é€¼è¿‘ã€‚
       Temp = InputValue;
-      ArctanResult = InputValue; %arctanº¯ÊıÌ©ÀÕÕ¹¿ªÊ½µÄµÚÒ»Ïî
+      ArctanResult = InputValue; %arctanå‡½æ•°æ³°å‹’å±•å¼€å¼çš„ç¬¬ä¸€é¡¹
       i = 1;
-      while (Abs(Temp) >= 1e-6) %µ±ÔöÁ¿ÖµĞ¡ÓÚ×îµÍ¾«¶ÈÊ±£¬ÔòÍ£Ö¹¼ÆËã¡£
-          Temp = (-1) * Temp * (2 * i - 1) * InputValue * InputValue / (2 * i + 1); %arctanº¯ÊıÌ©ÀÕÕ¹¿ªÊ½ÖĞ¶ÔÓ¦µÄÃ¿Ò»Ïî
-          ArctanResult = ArctanResult + Temp; %ÒÀ´ÎÀÛ¼Ó£¬µÃµ½arctanº¯ÊıµÄÌ©ÀÕÕ¹¿ªÊ½¡£
+      while (Abs(Temp) >= 1e-6) %å½“å¢é‡å€¼å°äºæœ€ä½ç²¾åº¦æ—¶ï¼Œåˆ™åœæ­¢è®¡ç®—ã€‚
+          Temp = (-1) * Temp * (2 * i - 1) * InputValue * InputValue / (2 * i + 1); %arctanå‡½æ•°æ³°å‹’å±•å¼€å¼ä¸­å¯¹åº”çš„æ¯ä¸€é¡¹
+          ArctanResult = ArctanResult + Temp; %ä¾æ¬¡ç´¯åŠ ï¼Œå¾—åˆ°arctanå‡½æ•°çš„æ³°å‹’å±•å¼€å¼ã€‚
           i = i + 1;
       end
-      ArctanResult = ConvertToAngle(ArctanResult);
-      ArctanResult = roundn(ArctanResult, -2); %±£ÁôÁ½Î»Ğ¡Êı
+    else                                        %å¦‚æœè¾“å…¥å‚æ•°çš„èŒƒå›´è¶…å‡º[-1,1],åˆ™ç”¨æ´›æœ—çº§æ•°é€¼è¿‘ã€‚
+      Temp = 1 / InputValue;
+      ArctanResult = 1 / InputValue;
+      j = 1;
+      while (Abs(Temp) >= 1e-6) %å½“å¢é‡å€¼å°äºæœ€ä½ç²¾åº¦æ—¶ï¼Œåˆ™åœæ­¢è®¡ç®—ã€‚
+          Temp = (-1) * Temp * (2 * j - 1) * (1 / InputValue) * (1 / InputValue) / (2 * j + 1);
+          ArctanResult = ArctanResult + Temp;
+          j = j + 1;
+      end
+      ArctanResult = pi / 2 - ArctanResult;
+    end
+  ArctanResult = ConvertToAngle(ArctanResult);
+  ArctanResult = roundn(ArctanResult, -2); %ä¿ç•™ä¸¤ä½å°æ•°
   end
 %% 
-%È¡¾ø¶ÔÖµ
+%å–ç»å¯¹å€¼
   function AbsResult = Abs(x)
       if (x < 0)
           AbsResult = -x;
@@ -30,7 +42,7 @@ function ArctanResult = Arctan(InputValue)
       end
   end
 %% 
-%½«»¡¶È×ª»»Îª½Ç¶È
+%å°†å¼§åº¦è½¬æ¢ä¸ºè§’åº¦
     function Angle = ConvertToAngle(x)
         Angle = x * (180 / pi);
     end
