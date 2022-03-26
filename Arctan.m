@@ -1,6 +1,6 @@
 %% 
 %%%%%%%%%       arctan函数求解过程          %%%%%%%%%%%%%%
-%输入参数：数字，范围（-1，1）
+%输入参数：数字，范围（-128，127）
 %输出参数：arctan函数所求得的角度
 %% 
 function ArctanResult = Arctan(InputValue)
