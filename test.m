@@ -26,7 +26,7 @@ exceed_arctan = 0;
 %sin
 for i=1:1000
     systemresult= sind(input_sin(i));%MATLAB自带库函数
-    fuctionresult = feature_sin(input_sin(i));%自定义计算函数
+    fuctionresult = Sin(input_sin(i));%自定义计算函数
     error_sin(i) = abs(systemresult-fuctionresult);%求绝对值误差
     if error_sin(i) <= 1e-2%误差精度判断
         standard_sin=standard_sin+1;
@@ -41,7 +41,7 @@ fprintf('\n ');
 %cos
 for i=1:1000
     systemresult = cosd(input_sin(i));
-    fuctionresult = lu_cos(input_sin(i));
+    fuctionresult = Cos(input_sin(i));
     error_cos(i) = abs(systemresult-fuctionresult);
     if error_cos(i) <= 1e-2
         standard_cos=standard_cos+1;
