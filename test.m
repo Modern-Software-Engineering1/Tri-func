@@ -26,7 +26,7 @@ exceed_arctan = 0;
 %sin
 for i=1:1000
     systemresult= sind(input_sin(i));%MATLAB自带库函数
-    fuctionresult = zyq_sin(input_sin(i));%自定义计算函数
+    fuctionresult = feature_sin(input_sin(i));%自定义计算函数
     error_sin(i) = abs(systemresult-fuctionresult);%求绝对值误差
     if error_sin(i) <= 1e-2%误差精度判断
         standard_sin=standard_sin+1;
@@ -81,4 +81,3 @@ for i=1:1000
 end    
 fprintf('arctan准确率%.2f%%',standard_arctan/10);
 fprintf('  arctan错误率%.2f%%',exceed_arctan/10);
-fprintf('\n ');
