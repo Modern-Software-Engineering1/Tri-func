@@ -8,7 +8,7 @@ clear;
 close all;
 input_sin = randi([0,360],1,1000);%sin，cos函数输入
 input_arcsin = randi([-1,1],1,1000);%arcsin函数输入
-input_arctan = randi([-1,1],1,1000);%arctan函数输入
+input_arctan = randi([-128,127],1,1000);%arctan函数输入
 
 error_sin=ones(1,1000) * 0;
 error_cos=ones(1,1000) * 0;
