@@ -1,6 +1,6 @@
 % cos(x) = 1 - x^2 / 2! + x^4 / 4! + ……
 
-function Result= Cos_LL(Input)
+function Result= Cos(Input)
 	Angle = pi * (Input / 180);	%输入转换为弧度	    
 	Result = 0;  			
 	Symbol = 1;			%符号			
