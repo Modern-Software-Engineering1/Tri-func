@@ -138,7 +138,7 @@ function pushbutton9_Callback(hObject, eventdata, handles)
 % --- Executes on button press in pushbutton10. ¡ª¡ª"sin"
 function pushbutton10_Callback(hObject, eventdata, handles)
     TextString = get(handles.edit1,'String'); %Í¬×Ö·û'7'
-    TextString = strcat(TextString,'Sin');
+    TextString = strcat(TextString,'SIN');
     set(handles.edit1,'String',TextString);
     guidata(hObject, handles);
 % hObject    handle to pushbutton10 (see GCBO)
@@ -168,10 +168,10 @@ function pushbutton12_Callback(hObject, eventdata, handles)
 % handles    structure with handles and user data (see GUIDATA)
 
 
-% --- Executes on button press in pushbutton13.  ¡ª¡ª¡°cos¡±
+% --- Executes on button press in pushbutton13.  ¡ª¡ª"cos"
 function pushbutton13_Callback(hObject, eventdata, handles)
     TextString = get(handles.edit1,'String'); %Í¬×Ö·û'7'
-    TextString = strcat(TextString,'Cos');
+    TextString = strcat(TextString,'COS');
     set(handles.edit1,'String',TextString);
     guidata(hObject, handles);
 % hObject    handle to pushbutton13 (see GCBO)
@@ -196,7 +196,7 @@ function pushbutton15_Callback(hObject, eventdata, handles)
 % eventdata  reserved - to be defined in a future version of MATLAB
 % handles    structure with handles and user data (see GUIDATA)
     TextString = get(handles.edit1,'String'); %Í¬×Ö·û'7'
-    TextString = strcat(TextString,'Arcsin');
+    TextString = strcat(TextString,'arcsin');
     set(handles.edit1,'String',TextString);
     guidata(hObject, handles);
 
@@ -226,7 +226,7 @@ function pushbutton17_Callback(hObject, eventdata, handles)
 % --- Executes on button press in pushbutton18. ¡ª¡ª¡°arctan¡±
 function pushbutton18_Callback(hObject, eventdata, handles)
     TextString = get(handles.edit1,'String'); %Í¬×Ö·û'7'
-    TextString = strcat(TextString,'Arctan');
+    TextString = strcat(TextString,'arctan');
     set(handles.edit1,'String',TextString);
     guidata(hObject, handles);
 
